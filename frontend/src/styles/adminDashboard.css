@@ -1,0 +1,68 @@
+.is-sticky {
+  position: sticky !important;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.select select:focus {
+  border-color: white !important;
+  box-shadow: 0 0 0 0.125em #333 !important;
+}
+
+
+.clock {
+  width: 150px;
+  height: 150px;
+  border: 6px solid #333;
+  border-radius: 50%;
+  position: relative;
+  margin-top: 20px;
+  background: white;
+}
+
+.hand {
+  position: absolute;
+  background: #333;
+  transform-origin: bottom center;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  border-radius: 2px;
+}
+
+.hour {
+  width: 5px;
+  height: 35px;
+  top: 40px;
+  background: #000;
+  z-index: 3;
+}
+
+.minute {
+  width: 3px;
+  height: 50px;
+  top: 25px;
+  background: #666;
+  z-index: 2;
+}
+
+.second {
+  width: 2px;
+  height: 65px;
+  top: 10px;
+  background: red;
+  z-index: 1;
+}
+
+.center-point {
+  width: 10px;
+  height: 10px;
+  background: #000;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+}

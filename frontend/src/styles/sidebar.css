@@ -1,0 +1,110 @@
+/* frontend/src/styles/Sidebar.css */
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 250px;
+  background-color: #f5f5f5;
+  padding: 1rem;
+  transition: transform 0.3s ease-in-out;
+  z-index: 1000;
+}
+
+.sidebar-brand {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  border-bottom: 1px solid #dbdbdb;
+}
+
+.sidebar-user {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-weight: 500;
+}
+
+.sidebar-burger {
+  display: none;
+}
+
+.sidebar-menu {
+  margin-top: 1rem;
+}
+
+.sidebar-item {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  margin: 0.5rem 0;
+  color: #363636;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.sidebar-item:hover {
+  background-color: #e8e8e8;
+}
+
+.sidebar-item.is-active {
+  background-color: #3273dc;
+  color: white;
+}
+
+.sidebar-item .icon {
+  margin-right: 0.75rem;
+}
+
+.is-fullheight {
+  min-height: 100vh;
+}
+
+.content-area {
+  padding-left: 260px; /* Sesuaikan dengan lebar sidebar */
+  background-color: #ffffff;
+}
+
+.main-content {
+  padding: 2rem;
+  min-height: calc(100vh - 100px); /* Sesuaikan dengan tinggi footer */
+}
+
+@media screen and (max-width: 768px) {
+  .sidebar {
+    transform: translateX(-100%);
+  }
+
+  .sidebar.is-active {
+    transform: translateX(0);
+  }
+
+  .sidebar-burger {
+    display: block;
+    position: fixed;
+    top: 1rem;
+    left: 1rem;
+    z-index: 1001;
+  }
+
+  .content-area {
+    padding-left: 0;
+  }
+
+  .main-content {
+    padding: 1rem;
+  }
+}
+
+.content-area {
+  margin-left: 250px; /* Sesuai lebar sidebar */
+  transition: margin-left 0.3s ease-in-out;
+}
+
+.main-content {
+  padding: 2rem;
+  background-color: #ffffff;
+  min-height: calc(100vh - 100px); /* Atur tinggi minimal biar konten nggak pendek */
+}
